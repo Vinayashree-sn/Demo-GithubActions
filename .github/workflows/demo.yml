@@ -10,7 +10,10 @@ jobs:
     steps:
      - uses: actions/checkout@v4
      - name: addition
+    
        run: echo $((3+5))
+     - name: subtraction
+       run: echo $((5-3))
     
 
    
