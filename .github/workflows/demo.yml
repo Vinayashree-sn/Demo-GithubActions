@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v4
-     - name: addition
-    
+     - name: addition,subtraction
        run: echo $((3+5))
-     - name: subtraction
-       run: echo $((5-3))
+            echo $((5-3))
     
 
    
