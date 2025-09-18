@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v4
-     - name: Run a one-line script
-       run: echo Hello gihub actions
+     - name: addition
+       run: echo $ {(3+5)}
     
 
    
