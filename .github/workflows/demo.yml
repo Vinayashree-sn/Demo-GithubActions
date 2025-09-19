@@ -1,17 +1,23 @@
-name: Demo-vinayashree
+name: Commit message Workflow-vinayashree
 
 on:
   push:
     branches:
       - main
+
 jobs:
-  vinayashree:
+  deploy:
+    if: contains(github.event.head_commit.message, '[deploy]')
     runs-on: ubuntu-latest
+
     steps:
-     - uses: actions/checkout@v4
-     - name: addition,subtraction
-       run: echo $((3+5))
-            echo $((5-3))
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run the deployment script
+        run: echo "Deploying this application"
+
+
     
 
    
