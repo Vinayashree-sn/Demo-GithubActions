@@ -1,4 +1,4 @@
-name: Manually running the file
+name: Manually running the file1
 
 on:
  workflow_dispatch:
