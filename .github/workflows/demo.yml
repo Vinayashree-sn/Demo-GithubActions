@@ -4,35 +4,24 @@ on:
   push:
     branches:
       - main
-
+env:
+ DAY_OF_WEEK: Monday
 jobs:
-  build:
+  demo:
     runs-on: ubuntu-latest
-
-    env:  # Custom environment variables at job level
-      NODE_ENV: production
-      REGION: us-east-1
-
+    env:
+     Greeting: hello
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Environmet declaration
+      run: echo "$Greeting $First_name . Today is $DAY_OF_WEEK"
+      env:
+       First_name: Vinayashree
+    
+    
+  
+ 
+ 
 
-      - name: Print default environment variables
-        run: |
-          echo "Repository: $GITHUB_REPOSITORY"
-          echo "Commit SHA: $GITHUB_SHA"
-          echo "Workflow: $GITHUB_WORKFLOW"
-
-      - name: Use custom environment variables
-        run: |
-          echo "Environment: $NODE_ENV"
-          echo "Region: $REGION"
-
-      - name: Use encrypted secret
-        env:
-          API_KEY: ${{ secrets.MY_API_KEY }}
-        run: |
-          echo "Using secret API key: $API_KEY"
 
 
     
