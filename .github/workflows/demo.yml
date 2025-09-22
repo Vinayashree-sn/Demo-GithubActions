@@ -1,9 +1,7 @@
-name: Example Workflow Using Environment Variables
+name: Manually running the file
 
 on:
-  push:
-    branches:
-      - main
+ workflow_dispatch:
 env:
  DAY_OF_WEEK: Monday
 jobs:
