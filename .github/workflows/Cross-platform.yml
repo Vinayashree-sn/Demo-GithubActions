@@ -1,0 +1,42 @@
+name: Cross-Platform Build - Separate Jobs
+
+on:
+  push:
+    branches:
+      - vinayashree 
+
+jobs:
+  build-ubuntu:
+    name: Build on Ubuntu
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print OS Info
+        run: |
+          echo "Running on Ubuntu"
+          uname -a
+
+  build-windows:
+    name: Build on Windows
+    runs-on: windows-latest 
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print OS Info
+        run: |
+          echo "Running on Windows"
+          ver
+
+  build-macos:
+    name: Build on macOS
+    runs-on: macos-latest  # Use macOS runner
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print OS Info
+        run: |
+          echo "Running on macOS"
