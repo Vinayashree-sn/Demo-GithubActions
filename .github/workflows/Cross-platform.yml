@@ -28,7 +28,7 @@ jobs:
       - name: Print OS Info
         run: |
           echo "Running on Windows"
-          ver
+          $PSVersionTable
 
   build-macos:
     name: Build on macOS
