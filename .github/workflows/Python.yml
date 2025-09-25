@@ -1,0 +1,30 @@
+name: Python script
+on:
+ workflow_dispatch:
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       os:["3.8","3.9","3.10","3.11"]
+
+   steps:
+   - name: Checkout code
+     uses: actions/checkout@v3
+     with:
+      repository: CosmosGenAI/promptGPT
+   - name: Install dependencies
+     run: |
+      sudo apt update && sudo apt upgrade -y
+      sudo apt install python ${{matrix.os}}
+      pip3 install dataset
+      pip3 install pandas
+   - name: Run application
+     run: |
+      python ./main.py
+    
+      
+     
+   
+   
+
