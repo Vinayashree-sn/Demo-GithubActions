@@ -1,12 +1,14 @@
 name: Python script
 on:
- workflow_dispatch:
+ push:
+  branches:
+   - vinayashree
 jobs:
   build:
    runs-on: ubuntu-latest
    strategy:
      matrix:
-       os:["3.8","3.9","3.10","3.11"]
+       os: ["3.8", "3.9", "3.10", "3.11"]
 
    steps:
    - name: Checkout code
