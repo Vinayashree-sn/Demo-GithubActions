@@ -10,5 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Issue
+        uses: actions/checkout@v4
+
+      - name: Test
         run: |
           echo "This is for issue creation"
