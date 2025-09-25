@@ -1,0 +1,19 @@
+name: Cross-Platform Matrix Build-vinayashree
+ 
+on:
+  push:
+    branches:
+      - vinayashree
+ 
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+ 
+    runs-on: ${{ matrix.os }}
+ 
+    steps:
+      - name: Print OS Info
+        run: echo "Running on ${{ matrix.os }}"
+
