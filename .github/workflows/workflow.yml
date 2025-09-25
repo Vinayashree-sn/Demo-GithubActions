@@ -1,0 +1,14 @@
+name: Issue creation
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue
+        run: |
+          echo "This is for issue creation"
