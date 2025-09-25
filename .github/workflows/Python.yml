@@ -1,6 +1,8 @@
 name: Python script
 on:
- workflow_dispatch:
+ push:
+  branches:
+   - vinayashree
 jobs:
   build:
    runs-on: ubuntu-latest
