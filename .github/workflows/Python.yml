@@ -6,11 +6,11 @@ jobs:
    runs-on: ubuntu-latest
    strategy:
      matrix:
-       os:["3.8","3.9","3.10","3.11"]
+       os: ["3.8", "3.9", "3.10", "3.11"]
 
    steps:
    - name: Checkout code
-     uses: actions/checkout@v3
+     uses: actions/setup-python@v4
      with:
       repository: CosmosGenAI/promptGPT
    - name: Install dependencies
