@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-release-project",
+  "version": "1.0.0",
+  "description": "A sample Node.js project for GitHub Actions release workflow",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building project...' && mkdir -p dist && echo 'Build complete.' > dist/output.txt"
+  },
+  "author": "Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
