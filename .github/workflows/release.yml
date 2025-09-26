@@ -1,0 +1,34 @@
+name: node.js release
+on: [push]
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  permissions:
+   contents: write
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: setup node.js
+      uses: actions/checkout@v4
+      with:
+        node-version: 20
+    - name: Npm install
+      run: npm install
+    - name: Install dependencies
+      run: npm ci
+    - name: build 
+      run: npm run build
+    - name: Create releae
+      uses: actiions/create-release@v1
+      env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+       tag_name: v${{ github.run_number }}
+       release_name: Releae v${{ github.run_number }}
+       
+      
+      
+        
+    
+    
+   
