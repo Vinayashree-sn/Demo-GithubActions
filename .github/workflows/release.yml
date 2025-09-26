@@ -1,5 +1,8 @@
-name: node.js release
-on: [push]
+name: node.js release1
+on: 
+ push:
+  branches:
+   - main
 jobs:
  build:
   runs-on: ubuntu-latest
