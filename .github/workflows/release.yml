@@ -12,6 +12,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         node-version: 20
+    - name: Check npm version
+      run: npm -v
     - name: Npm install
       run: npm install
     - name: Install dependencies
