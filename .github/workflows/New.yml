@@ -1,0 +1,16 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Release
+        run: echo "Releasing version ${{ github.ref }}"
