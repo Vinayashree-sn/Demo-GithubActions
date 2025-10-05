@@ -1,4 +1,4 @@
-name: Install Python and Run Script
+name: Install Python and Run Script-new
 
 on:
   push:
