@@ -1,9 +1,7 @@
 name: Install Python and Run Script-new
 
 on:
-  push:
-    branches:
-      - main
+ workflow_dispatch:
 
 jobs:
   run-python-script:
